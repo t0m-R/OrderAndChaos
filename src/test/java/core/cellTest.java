@@ -1,0 +1,35 @@
+package core;
+
+import org.junit.Test;
+import java.awt.Point;
+import static org.junit.Assert.*;
+
+public class cellTest {
+
+    private final Cell cell = new Cell(new Point(2, 3));
+
+    @Test
+    public void testNullCell(){
+        assertNull(cell.getPiece());
+    }
+
+    @Test
+    public void testSetPiece(){
+        cell.setPiece(Piece.x);
+        assertSame(cell.getPiece(), Piece.x);
+    }
+
+    @Test
+    public void testPieceEquality() {
+        cell.setPiece(Piece.o);
+        assertTrue(cell.hasThisPiece(Piece.o));
+    }
+
+
+    @Test
+    public void testCoordinates() {
+        assertEquals(cell.getCoordinates(), new Point(2,3));
+    }
+
+
+}
