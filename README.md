@@ -1,2 +1,2 @@
 ## OrderAndChaos
-Good news will be come !
+Java implementation of classic board game Order and Chaos.
