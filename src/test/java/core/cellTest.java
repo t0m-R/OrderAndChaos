@@ -20,10 +20,12 @@ public class cellTest {
     }
 
     @Test
-    public void testPieceEquality() {
+    public void testPieceEqualityTrue() {
         cell.setPiece(Piece.o);
         assertTrue(cell.hasThisPiece(Piece.o));
+        assertFalse(cell.hasThisPiece(Piece.x));
     }
+
 
 
     @Test
